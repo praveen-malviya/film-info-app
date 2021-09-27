@@ -1,13 +1,16 @@
-import Searchbar from "./SearchBar";
+
+import { Link
+} from "react-router-dom";
+import SearchBar from "./SearchBar";
 
 const Header = () => {
     return (   
     <div className="header">
         <h1>FilmInfo</h1>
-        <Searchbar />
         <nav>
-        <a href="/movie">Movies</a>
-        <a href="/series">Tv Series</a>
+        <Link to="/"> Search </Link>
+        <Link to="/movies">MyMovies</Link>
+        {/* <Link to="/series">Tv Series</Link> */}
         </nav>
     </div> );
 }
