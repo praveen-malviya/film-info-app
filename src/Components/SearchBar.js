@@ -5,7 +5,6 @@ const SearchBar = () => {
 
     const [searchData, setSearchData] = useState(null);
     const [searchQuery, setSearchQuery] = useState("");
-    const [detailData, setDetailData] = useState(null);
 
     const [favouriteMovies, setFavouriteMovies] = useState([]);
 

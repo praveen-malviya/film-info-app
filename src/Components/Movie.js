@@ -4,20 +4,18 @@ import noMedia from "../Images/noMedia.png";
 
 const Movies = () => {
     const [movies, setMovies] = useState(null);
-     const [posTrue, setPosTrue] = useState(false);
 
          useEffect(() => {
              fetch('https://movie-rest-api-default-rtdb.firebaseio.com/movieData.json?print=pretty')
             .then(response => response.json())
             .then(json => {  
             setMovies(json)
-        //    console.log("MovieSS "+JSON.stringify(json));
             })
     }, [])
 
     const deleteHandler = (index) => {
             
-        const newdata = movies.filter(movie => !(movie.id == index))
+        const newdata = movies.filter(movie => !(movie.id === index))
         console.log(JSON.stringify(newdata));
         setMovies(newdata);
         fetch('https://movie-rest-api-default-rtdb.firebaseio.com/movieData.json', {
