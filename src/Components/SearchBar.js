@@ -14,7 +14,9 @@ const SearchBar = () => {
     const getServerData = async () => {
         const response = await fetch('https://movie-rest-api-default-rtdb.firebaseio.com/movieData.json?print=pretty')
         const data = await response.json();
-          setFavouriteMovies(data)
+          if(data){
+              setFavouriteMovies(data)
+          }
     }
 
     useEffect(() => {

@@ -1,6 +1,7 @@
 import noMedia from "../Images/noMedia.png"
 
 const SearchResult = ({ searchData, postServer }) => {
+    console.log(searchData)
     return ( 
         <div className="searchResult">
 
@@ -15,7 +16,7 @@ const SearchResult = ({ searchData, postServer }) => {
                         <img src={noMedia} alt="NoMovie poster" />
                     )}
                     <h5>{data.original_title}</h5>
-                    {data.release_date && <h5>{data.status}: {data.release_date.slice(0, 4)} </h5>}
+                    {data.release_date && <h5>Released: {data.release_date.slice(0, 4)} </h5>}
                     
                     <span className="rating"> Rated : {data.vote_average} </span>
                 
